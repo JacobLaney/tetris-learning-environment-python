@@ -40,9 +40,9 @@ def _map_action_to_key(action: Action) -> Union[Key, None]:
 
 def _rgba_to_rgb(framebuf: np.ndarray) -> np.ndarray:
     assert len(framebuf.shape) == 2
-    r = (framebuff >> 24) & 255
-    g = (framebuff >> 16) & 255
-    b = (framebuff >> 8) & 255
+    r = (framebuf >> 24) & 255
+    g = (framebuf >> 16) & 255
+    b = (framebuf >> 8) & 255
     image = np.stack([r, g, b], axis=2)
     return image
 
